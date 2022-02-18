@@ -1,0 +1,24 @@
+<h2>Employee List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Current Address</th>
+            <th>Perminent Address</th>
+            <th>Mailing Address</th>
+            <th>Actions </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor ="let employee of employees">
+            <td>{{employee.name}}</td>
+            <td>{{employee.currentAddress}}</td>
+            <td>{{employee.perminentAddress}}</td>
+            <td>{{employee.mailingAddress}}</td>
+            <td><button (click)="updateEmployee(employee.id)">UPDATE</button></td>
+            <td><button (click)="deleteEmployee(employee.id)">DELETE</button></td>
+            <td><button (click)="employeeDetails(employee.id)">VIEW</button></td>
+            </tr>
+    </tbody>
+</table>
